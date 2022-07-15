@@ -24,4 +24,13 @@ public class Student {
         this.email = email;
         this.birthDate = birthDate;
     }
+
+    public void updateStudent(String name, String cpf, String email, LocalDate birthDate) {
+
+        this.name = name.isBlank() ? this.name : name;
+        this.cpf = cpf.isBlank() ? this.cpf : cpf;
+        this.email = email.isBlank() ? this.email : email;
+        this.birthDate = birthDate == null ? this.birthDate : birthDate;
+    }
+
 }
