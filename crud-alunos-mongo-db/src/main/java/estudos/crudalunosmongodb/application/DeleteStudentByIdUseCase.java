@@ -1,6 +1,8 @@
 package estudos.crudalunosmongodb.application;
 
 import estudos.crudalunosmongodb.application.port.out.DeleteStudentByIdPort;
+import estudos.crudalunosmongodb.application.port.out.ExistStudentByIdPort;
+import estudos.crudalunosmongodb.util.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,8 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 public class DeleteStudentByIdUseCase {
 
     private final DeleteStudentByIdPort deleteStudentByIdPort;
+    private final ExistStudentByIdPort existStudentByIdPort;
 
     public void execute(String idStudent) {
+
+        if (!existStudentByIdPort.existStudentById(idStudent)) {
+            throw new ResourceNotFoundException("Student not found!");
+        }
 
         deleteStudentByIdPort.deleteStudentById(idStudent);
 
