@@ -2,9 +2,9 @@ package estudos.crudalunosmongodb.adapter.persistence;
 
 import estudos.crudalunosmongodb.application.port.out.*;
 import estudos.crudalunosmongodb.domain.Student;
+import estudos.crudalunosmongodb.util.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.ResourceAccessException;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class StudentPersistenceAdapter implements SaveStudentPort,
     public Student findStudentById(String idStudent) {
 
         return studentRepository.findById(idStudent)
-                                .orElseThrow(() -> new ResourceAccessException("Student not found"));
+                                .orElseThrow(() -> new ResourceNotFoundException("Student not found!"));
     }
 
     @Override
