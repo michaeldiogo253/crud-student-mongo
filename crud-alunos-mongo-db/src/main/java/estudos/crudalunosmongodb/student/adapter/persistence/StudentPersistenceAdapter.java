@@ -1,7 +1,7 @@
-package estudos.crudalunosmongodb.adapter.persistence;
+package estudos.crudalunosmongodb.student.adapter.persistence;
 
-import estudos.crudalunosmongodb.application.port.out.*;
-import estudos.crudalunosmongodb.domain.Student;
+import estudos.crudalunosmongodb.student.application.port.out.*;
+import estudos.crudalunosmongodb.student.domain.Student;
 import estudos.crudalunosmongodb.util.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

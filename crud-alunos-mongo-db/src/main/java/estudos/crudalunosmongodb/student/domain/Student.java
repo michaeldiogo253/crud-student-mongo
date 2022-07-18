@@ -1,7 +1,9 @@
-package estudos.crudalunosmongodb.domain;
+package estudos.crudalunosmongodb.student.domain;
 
+import estudos.crudalunosmongodb.teacher.domain.Teacher;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
@@ -11,11 +13,12 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Student {
 
-    private String id;
+    @Id private String id;
     private String name;
     private String cpf;
     private String email;
     private LocalDate birthDate;
+    private Teacher teacher;
 
     public Student(String name, String cpf, String email, LocalDate birthDate) {
 
@@ -31,6 +34,11 @@ public class Student {
         this.cpf = cpf.isBlank() ? this.cpf : cpf;
         this.email = email.isBlank() ? this.email : email;
         this.birthDate = birthDate == null ? this.birthDate : birthDate;
+    }
+
+    public void bindTeacher(Teacher teacher) {
+
+        this.teacher = teacher;
     }
 
 }

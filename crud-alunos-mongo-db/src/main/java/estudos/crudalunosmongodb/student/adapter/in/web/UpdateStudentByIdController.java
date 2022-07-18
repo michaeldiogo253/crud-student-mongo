@@ -1,7 +1,7 @@
-package estudos.crudalunosmongodb.adapter;
+package estudos.crudalunosmongodb.student.adapter.in.web;
 
-import estudos.crudalunosmongodb.adapter.in.web.request.UpdateStudentRequest;
-import estudos.crudalunosmongodb.application.UpdateStudentUseCase;
+import estudos.crudalunosmongodb.student.adapter.in.web.request.UpdateStudentRequest;
+import estudos.crudalunosmongodb.student.application.UpdateStudentUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

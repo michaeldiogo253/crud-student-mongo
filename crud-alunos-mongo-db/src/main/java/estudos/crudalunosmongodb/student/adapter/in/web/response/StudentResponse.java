@@ -1,9 +1,11 @@
-package estudos.crudalunosmongodb.adapter.in.web.response;
+package estudos.crudalunosmongodb.student.adapter.in.web.response;
 
-import estudos.crudalunosmongodb.domain.Student;
+import estudos.crudalunosmongodb.student.domain.Student;
+import estudos.crudalunosmongodb.teacher.adapter.in.web.response.TeacherResponse;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -18,6 +20,7 @@ public class StudentResponse {
     private String cpf;
     private String email;
     private LocalDate birthDate;
+    private TeacherResponse teacherResponse;
 
     public static StudentResponse of(Student student) {
 
@@ -25,7 +28,8 @@ public class StudentResponse {
                                    student.getName(),
                                    student.getCpf(),
                                    student.getEmail(),
-                                   student.getBirthDate());
+                                   student.getBirthDate(),
+                                   TeacherResponse.from(student.getTeacher()));
     }
 
     public static List<StudentResponse> of(List<Student> students) {
@@ -35,5 +39,7 @@ public class StudentResponse {
                        .collect(Collectors.toList());
 
     }
+
+
 
 }

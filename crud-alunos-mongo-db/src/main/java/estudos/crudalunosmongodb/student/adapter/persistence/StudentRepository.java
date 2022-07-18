@@ -1,6 +1,6 @@
-package estudos.crudalunosmongodb.adapter.persistence;
+package estudos.crudalunosmongodb.student.adapter.persistence;
 
-import estudos.crudalunosmongodb.domain.Student;
+import estudos.crudalunosmongodb.student.domain.Student;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface StudentRepository extends MongoRepository<Student, String> {
