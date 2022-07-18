@@ -4,6 +4,7 @@ import estudos.crudalunosmongodb.teacher.domain.Teacher;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
@@ -18,6 +19,7 @@ public class Student {
     private String cpf;
     private String email;
     private LocalDate birthDate;
+    @DBRef
     private Teacher teacher;
 
     public Student(String name, String cpf, String email, LocalDate birthDate) {
