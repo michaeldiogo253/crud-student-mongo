@@ -1,4 +1,4 @@
-package estudos.crudalunosmongodb.application.port.out;
+package estudos.crudalunosmongodb.student.application.port.out;
 
 public interface ExistStudentByIdPort {
 

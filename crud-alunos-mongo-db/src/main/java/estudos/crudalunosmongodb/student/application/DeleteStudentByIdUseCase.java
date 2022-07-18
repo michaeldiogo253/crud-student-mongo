@@ -1,7 +1,7 @@
-package estudos.crudalunosmongodb.application;
+package estudos.crudalunosmongodb.student.application;
 
-import estudos.crudalunosmongodb.application.port.out.DeleteStudentByIdPort;
-import estudos.crudalunosmongodb.application.port.out.ExistStudentByIdPort;
+import estudos.crudalunosmongodb.student.application.port.out.DeleteStudentByIdPort;
+import estudos.crudalunosmongodb.student.application.port.out.ExistStudentByIdPort;
 import estudos.crudalunosmongodb.util.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

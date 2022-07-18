@@ -1,4 +1,4 @@
-package estudos.crudalunosmongodb.adapter.in.web;
+package estudos.crudalunosmongodb.student.adapter.in.web;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
