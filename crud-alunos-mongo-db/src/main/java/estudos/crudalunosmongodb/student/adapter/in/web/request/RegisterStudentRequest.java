@@ -1,4 +1,4 @@
-package estudos.crudalunosmongodb.adapter.in.web.request;
+package estudos.crudalunosmongodb.student.adapter.in.web.request;
 
 import lombok.Value;
 import org.hibernate.validator.constraints.br.CPF;

@@ -1,7 +1,7 @@
-package estudos.crudalunosmongodb.application;
+package estudos.crudalunosmongodb.student.application;
 
-import estudos.crudalunosmongodb.application.port.out.SaveStudentPort;
-import estudos.crudalunosmongodb.domain.Student;
+import estudos.crudalunosmongodb.student.application.port.out.SaveStudentPort;
+import estudos.crudalunosmongodb.student.domain.Student;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

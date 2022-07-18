@@ -1,7 +1,7 @@
-package estudos.crudalunosmongodb.adapter.in.web;
+package estudos.crudalunosmongodb.student.adapter.in.web;
 
-import estudos.crudalunosmongodb.adapter.in.web.response.StudentResponse;
-import estudos.crudalunosmongodb.application.port.out.FindAllStudentPort;
+import estudos.crudalunosmongodb.student.adapter.in.web.response.StudentResponse;
+import estudos.crudalunosmongodb.student.application.port.out.FindAllStudentPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
